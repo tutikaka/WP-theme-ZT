@@ -1,0 +1,591 @@
+﻿/*   
+Theme Name: your-clean-template-3
+Theme URI: https://github.com/saxap/clean-wp-template
+Version: 3.0
+Tags: clean, development, html5, bootstrap
+Description: Clean wordpress theme with minimal bootstrap3 markup for fast development starting
+Author: saxa:p
+Author URI: http://dontforget.pro
+*/
+
+
+
+
+@media (min-width: 979px) { 
+	ul.nav li.dropdown.show-on-hover:hover > ul.dropdown-menu { /* для раскрывания субменю по наведению */
+		display: block;
+	}
+	.comment-list .children { /* для комментов */
+		padding: 0;
+		margin-left: 74px;
+		padding-bottom: 15px;
+	}
+	.comment-list .media {
+		margin-top: 0;
+	}
+}
+
+@font-face {
+	font-family: Romanus; /* Имя шрифта */
+	src: url(fonts/a_romanus-bold.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+html,body {
+	background-color: #024851;
+    height: 100%;
+    min-height: 100%;
+}
+
+
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.wp-caption {
+	background: #fff;
+	border: 1px solid #f0f0f0;
+	max-width: 96%; /* Image does not overflow the content area */
+	padding: 5px 3px 10px;
+	text-align: center;
+}
+
+.wp-caption.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
+
+#top-nav-ul > li a, #top-nav-ul > li a:visited {
+	color: #fff;
+	text-decoration:none;
+	display: block;
+	height: 100%;
+	padding: 12px;
+	padding-bottom: 0px; 
+}
+
+#top-nav-ul > li a:hover {
+	/*color:#02454e;*/
+	background-color: #02454e;
+	text-decoration:none;
+	display: block;
+	height: 100%;
+}
+
+#top-nav-ul > li a:active
+{
+	color:#fff;
+	background-color: rgba(255,255,255,0);
+	text-decoration:none;
+	display: block;
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5
+{
+	font-family: Romanus, "Times New Roman";
+}
+
+.post > h1, h2, h3, h4, h5 		/* заголовки в постах */
+{
+	text-align: center;
+	padding-left: 0px;
+}
+
+ul
+{
+	margin-left: 0px;
+	padding-left: 20px;
+}
+
+li
+{
+	text-decoration:none;
+	list-style-type: none;
+}
+
+.container {
+	width: 1366px;
+	background-color: white;
+}
+
+.entry-title {
+	align:center;
+    display: none;
+ }
+
+.main_container_header
+{
+	background-image: url(img/head_bg.jpg);
+	width: 1366px;
+	height: 392px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.header_block
+{
+	height: 44px;
+	position:relative;
+	min-height:44px;
+	padding: 0px;
+}
+
+.widget
+{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 5px;
+	padding: 5px;
+	background: linear-gradient(to top, #b7e4fa, #e7e6e4);
+	border-radius: 5px;
+}
+
+/*.widget_head
+{
+	position: absolute;
+	width: 232px;
+	height: 29px;
+	left: -6px;
+	top: -4px;
+	#background-image: url(img/widgets_head.png);
+}
+*/
+.widgettitle		/* заголовок виджета */
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	display: block;
+  text-align: center;
+	width: 100%;
+	font-size: 13pt;
+	font-family: Romanus, "Times New Roman";
+}
+
+.sidebar_left_div		/*  левый sidebar - <div>  */
+{
+	background-color: #a2cbd1;
+}
+
+.sidebar_left
+{
+	width: 17%;
+	float: left;
+	background-color: #a2cbd1;
+}
+
+.center_block
+{
+	width: 66%;
+	float: left;
+	padding: 0px 20px;
+}
+
+.sidebar_right
+{
+	width: 17%;
+	float: left;
+	background-color: #a2cbd1;
+}
+
+.menu_top
+{
+	color: #fff;
+	font-family: Romanus, "Times New Roman";
+	font-size: 16pt;
+	margin-top: 336px;  /* позиция меню по вертикали */
+	padding-left: 0px;
+}
+
+.menu_top_container
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.menu_top_ul
+{
+	height: 44px;
+	background: #046d7c;
+	background: linear-gradient(to top, #0697ac, #02454e);
+	margin-top: 0;
+	margin-bottom: 0px;
+}
+
+
+.menu_top_ul > li
+{
+	text-transform: uppercase;
+	padding: 0px 5px 0px 5px;
+	color: #fff;
+	line-height: 20px;
+	float: left;
+	list-style: none;
+	display: block;
+	height: 44px;
+}
+
+.main_page_button
+{
+	float:left;
+	position: relative;
+	width: 232px;
+	height: 44px;
+	background-image: url(img/main_button.png);
+}
+
+.main_page_button:hover
+{
+	cursor: pointer;
+	background-position: left bottom;
+	background-image: url(img/main_button.png);
+}
+
+.row
+{
+	position: relative;
+}
+
+.header_buttons
+{
+	position: absolute;
+	cursor: pointer;
+	background-repeat: no-repeat;
+}
+
+.map_site_img			/* стиль картинки  "карта сайта" */
+{
+	width: 114px;
+	height: 49px;
+	left: 223px;
+	bottom: 149px;
+	background-image: url(img/map_site.png);
+}
+
+.feedback_img    /* стиль картинки "написать нам" */
+{
+	width: 125px;
+	height: 48px;
+	left: 354px;
+	bottom: 149px;
+	background-image: url(img/feedback.png);
+}
+
+.title_img		/* стиль картинки-логотипа */
+{
+	width: 361px;
+	height: 156px;
+	left: 504px;
+	bottom: 140px;
+	background-image: url(img/title.png);
+}
+
+.eye_img   /* стиль картинки "версия для слабовидящих" */
+{
+	width: 235px;
+	height: 74px;
+	left: 896px;
+	bottom: 145px;
+	background-image: url(img/eye.png);
+}
+
+.menu_left_div		/*  левое меню - <div>  */
+{}
+
+.menu_left  /*  левое меню - <ul>  */
+{
+	width: 100%;
+	border: 1px solid #a2cbd1;
+	border-radius: 5px;
+	background: #046d7c;
+	background: linear-gradient(to top, #0697ac, #02454e);
+	color: #fff;
+	font-family: Romanus, "Times New Roman";
+	font-size: 17pt;
+	margin-top: 0px;
+	padding: 27px 0px 25px 0px;
+	list-style-image: url(img/marks.png);
+}
+
+.menu_left > li   /*  левое меню - <li>  */
+{
+	height: 44px;
+	margin-left: 35px;
+}
+
+.menu_left > li > a   /*  левое меню - <a>  */
+{
+	font-size: 14pt;
+	text-transform: uppercase;
+	text-decoration: none;
+	/*padding: 0px 27px 0px 27px;*/
+	color: #fff;
+	line-height: 20px;
+	display: block;
+ margin: 5px;}
+
+.footer
+{
+	background-color: #327586;
+	width: 100%;
+	float: left;
+	position: relative;
+	min-height: 1px;
+	/*padding-right: 15px;
+	padding-left: 15px;*/
+}
+
+.footer_head
+{
+	width: 100%;
+	height: 6px;
+	border-top: 1px solid #213D44;
+	border-bottom: 1px solid rgba(33,61,68, 0.6);
+	/*background-color: #47899A;
+	background-color: #98DBEC;*/
+	background-image: linear-gradient(20deg, #47899A, #98DBEC, #47899A, #98DBEC, #47899A, #98DBEC, #47899A, #98DBEC, #47899A);
+}
+
+.footer_widget_contener
+{}
+
+.footer_widget
+{
+	color: #fff;
+	font-size: 11px;
+	float: left;
+	width: 33%;
+	padding: 5px 5px;
+}
+
+.footer_widget > * > a, .footer_widget > * > * > a, .bottom-menu > * > * > * > a, .bottom-menu > * > a
+{
+	text-decoration: underline;
+	color: #fff;
+}
+
+/*.footer_sidebar_left, .footer_sidebar_center, .footer_sidebar_right
+{
+	border: 1px solid red;
+}*/
+
+
+
+#custom_html-3 > .widget_head, #custom_html-5 > .widget_head, #custom_html-6 > .widget_head
+{
+    position: absolute;
+    width: 232px;
+    height: 29px;
+    left: -6px;
+    top: -4px;
+    background-image: url(img/widgets_head.png);
+}
+
+.container_shadow /* тень */
+{
+	position: fixed;
+	background: rgba(0, 0, 0, 0);
+	width: 1366px;
+	height: 3000px;
+	margin-left: -15px;
+	box-shadow: -23px 0 20px -23px rgba(0, 0, 0, .8),
+   						23px 0 20px -23px rgba(0, 0, 0, .8);
+}
+
+/* афишы на главной странице */
+.posters_thumbnail /* миниатюра */
+{
+	position: relative;
+	margin-top: 3px;
+	margin-bottom: 5px;
+	width: 200px;
+	height: 320px;
+	overflow: hidden;
+}
+
+.posters_container
+{
+	display: flex;
+	text-align: justify;
+	padding: 0px;
+}
+
+.posters_container:after
+{
+	display: inline-block;
+  content: "";
+  width: 100%;
+}
+
+.one_poster
+{
+	position: relative;
+	/*display: block;*/
+	display: inline-block;
+	float: left;
+	margin: 8px;
+}
+
+.posters_img
+{
+	height: 320px;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+}
+
+.posters_more_info
+{
+	display: inline-block;
+}
+
+.posters_more_info > a
+{
+	font-family: Romanus, "Times New Roman";
+	font-size: 12pt;
+	color: #000;
+	text-decoration: underline;
+}
+
+.posters_more_info > a:hover
+{
+	text-decoration: none;
+}
+
+.posters_btm
+{
+	font-family: Romanus, "Times New Roman";
+	font-size: 12pt;
+	margin: 0px;
+	float: right;
+	color: #fff;
+}
+
+.posters_head
+{
+    position: absolute;
+    width: 210px;
+    height: 26px;
+    left: -6px;
+    top: -2px;
+    background-image: url(img/widgets_head.png);
+    background-size: 210px 26px;
+    z-index: 3;
+}
+
+.posters_hall_plan
+{
+	position: absolute;
+	bottom: 0px;
+}
+
+/* конец классов афиш на главной странице */
+
+.red_btm
+{
+	padding: 0px 5px;
+	display: inline-block;
+	background: linear-gradient(to top, #ff0007, #a40006);
+	border-radius: 5px;
+}
+
+.read_more
+{
+	float: right;
+	padding-right: 20px;
+}
