@@ -587,5 +587,15 @@ li
 .read_more
 {
 	float: right;
-	padding-right: 20px;
+	padding: 0px 15px;
+}
+
+.posts_meta
+{
+	padding-left: 15px;
+}
+
+.posts_meta_date
+{
+	display: inline-block;
 }

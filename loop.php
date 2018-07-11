@@ -18,8 +18,8 @@
 	<div class="<?php if ( has_post_thumbnail() ) { ?>col-sm-9<?php } else { ?>col-sm-12<?php } // разные классы в зависимости есть ли миниатюра ?>">
 		<?php the_excerpt(); // пост превью, до more ?>
 	</div>
-	<div class="meta">
-		<p>Опубликовано: <?php the_time(get_option('date_format')." в ".get_option('time_format')); ?></p> <?php // дата и время создания ?>
+	<div class="posts_meta">
+		<div class="posts_meta_date">Опубликовано: <?php the_time(get_option('date_format')." в ".get_option('time_format')); ?></div> <?php // дата и время создания ?>
 		<?php // ссылки на категории в которых опубликован пост, через зпт ?>
 		<?php // the_tags('<p>Тэги: ', ',', '</p>'); // ссылки на тэги поста ?>
 		<a class="read_more" href="<?php the_permalink(); ?>">
