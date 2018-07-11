@@ -592,10 +592,11 @@ li
 
 .posts_meta
 {
-	padding-left: 15px;
+	
 }
 
 .posts_meta_date
 {
 	display: inline-block;
+	padding: 0px 15px;
 }
