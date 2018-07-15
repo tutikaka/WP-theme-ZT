@@ -1,5 +1,5 @@
 /*   
-Theme Name: ZTthemes
+Theme Name: ZTthemes1
 Theme URI: https://github.com/saxap/clean-wp-template
 Version: 3.0
 Tags: clean, development, html5, bootstrap
@@ -633,3 +633,12 @@ li
 	display: inline-block;
 	padding: 0px 15px;
 }
+
+.menu_left > li:hover  ul{  /* для того, что бы работало подменю в левом меню */
+  display: block;
+}
+
+/* правильные цвета в подменю */
+#top-nav-ul > li  > ul > li > a {color:black;}
+#top-nav-ul > li  > ul > li > a:visited {color:black;}
+#top-nav-ul > li  > ul > li > a:hover {color:#ffffff;}
