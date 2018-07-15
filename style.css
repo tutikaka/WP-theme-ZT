@@ -638,7 +638,13 @@ li
   display: block;
 }
 
+.menu_left > * > .dropdown-menu
+{
+	margin-top: -20px;
+}
+
 /* правильные цвета в подменю */
 #top-nav-ul > li  > ul > li > a {color:black;}
 #top-nav-ul > li  > ul > li > a:visited {color:black;}
 #top-nav-ul > li  > ul > li > a:hover {color:#ffffff;}
+

@@ -2,7 +2,7 @@
 /**
  * Главная страница (index.php)
  * @package WordPress
- * @subpackage ZTthemes
+ * @subpackage your-clean-template-3
  */
 get_header(); // подключаем header.php ?> 
 <section>
