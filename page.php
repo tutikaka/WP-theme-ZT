@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Шаблон обычной страницы (page.php)
  * @package WordPress

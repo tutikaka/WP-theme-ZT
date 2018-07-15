@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Шаблон формы поиска (searchform.php)
  * @package WordPress

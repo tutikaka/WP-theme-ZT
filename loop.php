@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Запись в цикле (loop.php)
  * @package WordPress

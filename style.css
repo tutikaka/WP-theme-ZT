@@ -1,5 +1,5 @@
-﻿/*   
-Theme Name: your-clean-template-3
+/*   
+Theme Name: ZTthemes
 Theme URI: https://github.com/saxap/clean-wp-template
 Version: 3.0
 Tags: clean, development, html5, bootstrap
@@ -24,6 +24,27 @@ Author URI: http://dontforget.pro
 		margin-top: 0;
 	}
 }
+
+nav ul ul {
+			    display: none;
+			    position: absolute;
+			    top: 100%;
+			}
+			
+			/* отображаем выпадающий список при наведении */
+			nav ul li:hover > ul {
+			    display:inherit;
+				color:black;
+			}
+			
+			/* первый уровень выпадающего списка */
+			nav ul ul li {
+			    min-width:170px;
+			    float:none;
+				color:black;
+			    display:list-item;
+			    position: relative;
+			}
 
 @font-face {
 	font-family: Romanus; /* Имя шрифта */
@@ -568,10 +589,22 @@ li
     z-index: 3;
 }
 
-.posters_hall_plan
+.posters_hall_plan 
 {
 	position: absolute;
 	bottom: 0px;
+	font-family: Romanus;
+	font-size: 10pt;
+	color: #000;
+	text-decoration: underline;
+}
+
+.posters_hall_plan > a
+{
+	font-family: Romanus;
+	font-size: 10pt;
+	color: #000;
+	text-decoration: underline;
 }
 
 /* конец классов афиш на главной странице */

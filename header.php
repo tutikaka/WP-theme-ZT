@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Шаблон шапки (header.php)
  * @package WordPress

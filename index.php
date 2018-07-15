@@ -2,7 +2,7 @@
 /**
  * Главная страница (index.php)
  * @package WordPress
- * @subpackage your-clean-template-3
+ * @subpackage ZTthemes
  */
 get_header(); // подключаем header.php ?> 
 <section>
@@ -33,7 +33,7 @@ get_header(); // подключаем header.php ?>
 					elseif (is_year()) : printf('Yearly Archives: %s', get_the_date('Y')); // если по годам
 					else : 'Archives';
 				endif; ?></h1>
-				<?php query_posts('cat=9'); // вместо "9" указываем идентификатор вашей рубрики. ( Новости )
+				<?php query_posts('cat=6'); // вместо "9" указываем идентификатор вашей рубрики. ( Новости )
 				if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
 					<?php get_template_part('loop'); // для отображения каждой записи берем шаблон loop.php ?>
 				<?php endwhile; // конец цикла

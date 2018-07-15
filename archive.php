@@ -2,7 +2,7 @@
 /**
  * Страница архивов записей (archive.php)
  * @package WordPress
- * @subpackage your-clean-template-3
+ * @subpackage ZTthemes
  */
 get_header(); // подключаем header.php ?> 
 <section>
