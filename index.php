@@ -17,12 +17,12 @@ get_header(); // подключаем header.php ?>
 						'items_wrap' => '<ul id="%1$s" class="menu_left">%3$s</ul>', //nav navbar-nav  %2$s
 						'menu_class' => 'top-menu', // класс для ul, первые 2 обязательны
 						'walker' => new bootstrap_menu(true) // верхнее меню выводится по разметке бутсрапа, см класс в functions.php, если по наведению субменю не раскрывать то передайте false		  
-						) ); ?>
-					</div>
-					<div class="sidebar_left_div">
-						<?php  dynamic_sidebar( 'sidebar_left' ); ?>
-					</div>
-				</aside>
+					) ); ?>
+				</div>
+				<div class="sidebar_left_div">
+					<?php  dynamic_sidebar( 'sidebar_left' ); ?>
+				</div>
+			</aside>
 
 			<div class="center_block">
 				<?php get_template_part( 'loop', 'posters' ); // Подключаем файл loop-posters.php ?>
@@ -32,10 +32,12 @@ get_header(); // подключаем header.php ?>
 					elseif (is_month()) : printf('Monthly Archives: %s', get_the_date('F Y')); // если по месяцам
 					elseif (is_year()) : printf('Yearly Archives: %s', get_the_date('Y')); // если по годам
 					else : 'Archives';
-				endif; ?></h1>
-				<?php query_posts('cat=6'); // вместо "9" указываем идентификатор вашей рубрики. ( Новости )
-				if (have_posts()) : while (have_posts()) : the_post(); // если посты есть - запускаем цикл wp ?>
-					<?php get_template_part('loop'); // для отображения каждой записи берем шаблон loop.php ?>
+						endif; ?></h1>
+
+						<?php query_posts($query_string.'&cat=9'); /* категория новостей на глайной странице */
+						if (have_posts()) : while (have_posts()) : the_post();?>
+
+							<?php get_template_part('loop'); // для отображения каждой записи берем шаблон loop.php ?>
 				<?php endwhile; // конец цикла
 				else: echo '<p>Нет записей.</p>'; endif; // если записей нет, напишим "простите" ?>	 
 				<?php pagination(); // пагинация, функция нах-ся в function.php ?>
