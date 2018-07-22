@@ -540,6 +540,7 @@ li
 	display: inline-block;
 	float: left;
 	margin: 8px;
+	height: 372px;
 }
 
 .posters_img
@@ -552,6 +553,7 @@ li
 
 .posters_more_info
 {
+	font-size: 12pt;
 	display: inline-block;
 }
 
@@ -595,7 +597,7 @@ li
 	bottom: 0px;
 	font-family: Romanus;
 	font-size: 10pt;
-	color: #000;
+	color: #005DFF;
 	text-decoration: underline;
 }
 
@@ -603,11 +605,19 @@ li
 {
 	font-family: Romanus;
 	font-size: 10pt;
-	color: #000;
-	text-decoration: underline;
+	color: #005DFF;
+  /*text-decoration: underline;*/
 }
 
 /* конец классов афиш на главной странице */
+
+.link_btm
+{
+	color: #005DFF;
+	padding: 0px 5px;
+	display: inline-block;
+	text-decoration: underline;
+}
 
 .red_btm
 {

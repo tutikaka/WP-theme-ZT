@@ -20,8 +20,8 @@
 			<!--здесь выводится миниатюра записи-->
 			<div class="posters_thumbnail"><a href="<?php the_permalink(); ?>"><img class="posters_img" src="<?php echo $thumbnail_attributes[0]; /*URL миниатюры*/ ?>"></a></div>
 			<div class="posters_more_info"><a href="<?php the_permalink(); ?>">ПОДРОБНЕЕ</a></div>
-			<div class="posters_hall_plan popmake-253" <?php check_hall_plan($id);?>>План зала</div>
-			<div class="red_btm posters_btm popmake-251"><center>Забронировать<br> билет</center></div>
+			<div class="posters_hall_plan popmake-253" <?php check_tag($id, 'План зала');?>>План зала</div>
+			<?php check_tag_2($id, 'Бронь');?> <?/* тут выводится кнопка "забранировать билет", либо "Вход свободный, взависимости от тега" */?>
 		</div>
 	<?
 	endwhile;
